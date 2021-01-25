@@ -38,78 +38,7 @@
                          </div>
                      </div>
                      <!-- Small boxes (Stat box) -->
-                     <div class="row">
-                         <div class="col-lg-3 col-6">
-                             <!-- small box -->
-                             <div class="small-box bg-info">
-                                 <div class="inner">
-                                     <h3><?= $supplier['jml'] ?></h3>
 
-                                     <p>Supplier</p>
-                                 </div>
-                                 <div class="icon">
-                                     <i class="ion ion-bag"></i>
-                                 </div>
-                                 <?php if ($this->session->userdata('side') == 'admin') { ?>
-                                     <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                 <?php } ?>
-                             </div>
-                         </div>
-                         <!-- ./col -->
-                         <?php if ($this->session->userdata('side') == 'gudang') { ?>
-
-                             <div class="col-lg-3 col-6">
-                                 <!-- small box -->
-                                 <a href="<?= base_url('gudang/material') ?>" class="text-dark">
-                                     <div class="small-box bg-danger">
-                                         <div class="inner">
-
-                                             <h3><?= $limit['stok'] ?><sup style="font-size: 20px">gram</sup></h3>
-                                             <p><?= $limit['nama'] . ' - ' . $limit['varian'] ?></p>
-
-                                         </div>
-                                         <div class="icon">
-                                             <i class="ion ion-stats-bars"></i>
-                                         </div>
-                                         <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-                                     </div>
-                                 </a>
-                             </div>
-                         <?php } ?>
-                         <!-- ./col -->
-                         <div class="col-lg-3 col-6">
-                             <!-- small box -->
-                             <div class="small-box bg-warning">
-                                 <div class="inner">
-                                     <h3><?= $pegawai['jml'] ?></h3>
-
-                                     <p>Pegawai</p>
-                                 </div>
-                                 <div class="icon">
-                                     <i class="ion ion-person-add"></i>
-                                 </div>
-                                 <?php if ($this->session->userdata('side') == 'admin') { ?>
-                                     <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                                 <?php } ?>
-                             </div>
-                         </div>
-                         <!-- ./col -->
-                         <div class="col-lg-3 col-6">
-                             <!-- small box -->
-                             <div class="small-box bg-success">
-                                 <div class="inner">
-                                     <h3>65</h3>
-
-                                     <p>Unique Visitors</p>
-                                 </div>
-                                 <div class="icon">
-                                     <i class="ion ion-pie-graph"></i>
-                                 </div>
-                                 <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                             </div>
-                         </div>
-                         <!-- ./col -->
-                     </div>
                      <!-- /.row -->
                      <!-- Main row -->
 

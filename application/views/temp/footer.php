@@ -2,7 +2,7 @@
     <div class="float-right d-none d-sm-block">
         All rights reserved.
     </div>
-    <strong>Copyright &copy; 2020 </strong> Gudang Kopi Gayo
+    <strong>Copyright &copy; 2020 </strong> sistem perpustakaan
 </footer>
 
 <!-- Control Sidebar -->

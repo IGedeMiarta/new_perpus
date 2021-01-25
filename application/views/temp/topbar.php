@@ -20,12 +20,12 @@
                 </li> -->
     <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-user ">
-                <?php if ($this->session->userdata('side') == 'admin') {
-                    echo ' ADMINISTRATOR';
-                } else {
-                    echo ' Bag. Gudang';
-                } ?>
+            <i class="far fa-user "> Petugas
+                <!-- <?php if ($this->session->userdata('side') == 'admin') {
+                            echo ' ADMINISTRATOR';
+                        } else {
+                            echo ' Bag. Gudang';
+                        } ?> -->
                 <i class="fas fa-angle-down ml-2"></i>
             </i>
 
