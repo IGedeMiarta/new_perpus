@@ -22,7 +22,7 @@ class Petugas extends CI_Controller
         $data['role'] = 'Petugas';
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('temp/dashboard', $data);
         $this->load->view('temp/footer');
     }
@@ -33,7 +33,7 @@ class Petugas extends CI_Controller
 
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/buku', $data);
         $this->load->view('temp/footer');
     }
@@ -47,7 +47,7 @@ class Petugas extends CI_Controller
 
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/buku_tambah', $data);
         $this->load->view('temp/footer');
     }
@@ -96,7 +96,7 @@ class Petugas extends CI_Controller
         $data['rak'] = $this->databuku->read('rak');
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/buku_detail_add', $data);
         $this->load->view('temp/footer');
     }
@@ -126,7 +126,7 @@ class Petugas extends CI_Controller
 
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/buku_detail', $data);
         $this->load->view('temp/footer');
     }
@@ -139,13 +139,26 @@ class Petugas extends CI_Controller
         $this->databuku->delete(['kd_detail' => $kd], 'detail_buku');
         redirect('petugas/buku_detail/' . $id);
     }
+
+    public function rak()
+    {
+        $data['judul'] = 'Rak';
+        $data['rak'] = $this->databuku->read('rak');
+        $this->load->view('temp/header', $data);
+        $this->load->view('temp/topbar');
+        $this->load->view('temp/sidebar');
+        $this->load->view('petugas/rak', $data);
+        $this->load->view('temp/footer');
+    }
+
+
     public function anggota()
     {
         $data['judul'] = 'Anggota';
         $data['anggota'] = $this->databuku->anggota();
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/anggota', $data);
         $this->load->view('temp/footer');
     }
@@ -154,7 +167,7 @@ class Petugas extends CI_Controller
         $data['judul'] = 'Tambah Anggota';
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/anggota_add');
         $this->load->view('temp/footer');
     }
@@ -185,7 +198,7 @@ class Petugas extends CI_Controller
         $data['anggota'] = $this->databuku->read('donatur');
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/donatur', $data);
         $this->load->view('temp/footer');
     }
@@ -194,7 +207,7 @@ class Petugas extends CI_Controller
         $data['judul'] = 'Data Donatur';
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/donatur_add');
         $this->load->view('temp/footer');
     }
@@ -216,7 +229,7 @@ class Petugas extends CI_Controller
         $data['dd'] = $this->databuku->edit(['id_donatur' => $id], 'donatur');
         $this->load->view('temp/header', $data);
         $this->load->view('temp/topbar');
-        $this->load->view('petugas/sidebar');
+        $this->load->view('temp/sidebar');
         $this->load->view('petugas/donatur_edt', $data);
         $this->load->view('temp/footer');
     }
